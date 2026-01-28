@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Dame Silicon Valley Angels</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Home Specific Styles */
+        .hero {
+            background-color: var(--nd-navy);
+            background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--nd-gold);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--gray-100);
+        }
+
+        .section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .section-alt {
+            background-color: var(--white);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        .card {
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--nd-light-gold);
+            line-height: 1;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-sm);
+            background-color: var(--gray-200);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ND<span>SVA</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="get-funded.html">Get Funded</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Investing in the Next Generation of Notre Dame Innovation </h1>
+            <h1>Rooted in Tradition</h1>
+            <p>Notre Dame Silicon Valley Angels is a network of alumni and friends dedicated to partnering with
+                entrepreneurs who are changing the world.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="membership.html" class="btn btn-primary btn-large">Join the Network</a>
+                <a href="get-funded.html" class="btn btn-secondary btn-large">Get Funded</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p style="font-size: 1.1rem; max-width: 800px;">
+                The Notre Dame Silicon Valley Angels (NDSVA) is a collective of angels who are University of Notre Dame
+                alumni, faculty, and friends based in the Bay Area and beyond. Our mission is to leverage our collective
+                experience, network, and resources to support high-potential startups and foster innovation. We are
+                passionate about helping great companies grow while strengthening the Notre Dame entrepreneurial
+                ecosystem.
+            </p>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Our Approach</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="step-number">01</div>
+                    <h3>Identify</h3>
+                    <p>We look for opportunities with high potential and long-term growth, with a focus on Technology in
+                        the Bay Area, though we are open to opportunities globally.</p>
+                </div>
+                <div class="card">
+                    <div class="step-number">02</div>
+                    <h3>Partner</h3>
+                    <p>We leverage prior investment experience, industry expertise, and functional expertise to partner
+                        with growing companies and entrepreneurs.</p>
+                </div>
+                <div class="card">
+                    <div class="step-number">03</div>
+                    <h3>Invest</h3>
+                    <p>Members make individual investment decisions. We facilitate the process through due diligence,
+                        deal screening, and syndication opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section Placeholder -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Our Leadership</h2>
+            <p class="mb-4">Volunteers dedicated to the success of our network.</p>
+            <div class="grid-3">
+                <!-- Placeholders -->
+                <div class="card">
+                    <div class="profile-img"></div>
+                    <h3>Leadership Name</h3>
+                    <p class="text-muted">President</p>
+                </div>
+                <div class="card">
+                    <div class="profile-img"></div>
+                    <h3>Leadership Name</h3>
+                    <p class="text-muted">Vice President</p>
+                </div>
+                <div class="card">
+                    <div class="profile-img"></div>
+                    <h3>Leadership Name</h3>
+                    <p class="text-muted">Treasurer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo">ND<span>SVA</span></div>
+            <div class="footer-links">
+                <a href="index.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="get-funded.html">Get Funded</a>
+                <a href="membership.html">Membership</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2026 Notre Dame Silicon Valley Angels. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--gray-800);">The University of Notre Dame has no
+                liability or responsibility for information or materials you or others receive from or through the
+                Network.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

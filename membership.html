@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - Notre Dame Silicon Valley Angels</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .page-header {
+            background-color: var(--nd-navy);
+            color: var(--white);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--nd-gold);
+        }
+
+        .membership-card {
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            text-align: center;
+            height: 100%;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--nd-navy);
+            margin: var(--spacing-sm) 0;
+        }
+
+        .benefits-list {
+            list-style: none;
+            text-align: left;
+            margin: var(--spacing-md) 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: var(--spacing-xs);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: "✓";
+            color: var(--nd-gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ND<span>SVA</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="get-funded.html">Get Funded</a></li>
+                <li><a href="membership.html" class="active">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Join the Network</h1>
+            <p>Become part of the Notre Dame angel investing ecosystem.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 3rem;">
+                <p>NDSVA is a membership-based organization. Benefits include regular invites to our pitch events,
+                    access to deal flow, and networking with fellow alumni. You must be an accredited investor to join
+                    as an Angel Member.</p>
+            </div>
+
+            <div class="grid-3" style="justify-content: center; max-width: 900px; margin: 0 auto;">
+                <div class="membership-card">
+                    <h3>Angel Member</h3>
+                    <div class="price">$500<span
+                            style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/year</span></div>
+                    <p style="margin-bottom: 1rem;">For Accredited Investors</p>
+                    <ul class="benefits-list">
+                        <li>Access to all Pitch Events</li>
+                        <li>Full deal flow access</li>
+                        <li>Voting rights on deal selection</li>
+                        <li>Due diligence opportunities</li>
+                        <li>Networking with other angels</li>
+                    </ul>
+                    <a href="mailto:admins@ndsva.com?subject=Angel Membership Inquiry" class="btn btn-primary"
+                        style="width: 100%;">Apply for Membership</a>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Associate Member</h3>
+                    <div class="price">$250<span
+                            style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/year</span></div>
+                    <p style="margin-bottom: 1rem;">For Non-Accredited Investors</p>
+                    <ul class="benefits-list">
+                        <li>Access to Pitch Events (Observer)</li>
+                        <li>Education on angel investing</li>
+                        <li>Participate in due diligence support</li>
+                        <li>Event preparation involvment</li>
+                        <li>Great for early career professionals</li>
+                    </ul>
+                    <a href="mailto:admins@ndsva.com?subject=Associate Membership Inquiry" class="btn btn-secondary"
+                        style="width: 100%;">Apply for Associate</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem; text-align: center;">
+                <h3>Questions?</h3>
+                <p>Email us at <a href="mailto:admins@ndsva.com">admins@ndsva.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo">ND<span>SVA</span></div>
+            <div class="footer-links">
+                <a href="index.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="get-funded.html">Get Funded</a>
+                <a href="membership.html">Membership</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2026 Notre Dame Silicon Valley Angels. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--gray-800);">The University of Notre Dame has no
+                liability or responsibility for information or materials you or others receive from or through the
+                Network.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

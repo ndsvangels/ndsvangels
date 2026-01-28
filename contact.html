@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Notre Dame Silicon Valley Angels</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .page-header {
+            background-color: var(--nd-navy);
+            color: var(--white);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--nd-gold);
+        }
+
+        .contact-box {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ND<span>SVA</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="get-funded.html">Get Funded</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with the team.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-box">
+                <h3 style="margin-bottom: 2rem;">We'd love to hear from you</h3>
+                <p style="margin-bottom: 2rem;">Whether you are a startup looking for funding, an alum interested in
+                    joining, or just want to say hello.</p>
+
+                <a href="mailto:admins@ndsva.com" class="btn btn-primary btn-large">Email Us</a>
+
+                <p style="margin-top: 2rem; color: var(--text-muted);">
+                    General Inquiries: <a href="mailto:admins@ndsva.com">admins@ndsva.com</a>
+                </p>
+
+                <div style="margin-top: 3rem; border-top: 1px solid var(--gray-200); padding-top: 2rem;">
+                    <h4>Follow Us</h4>
+                    <!-- Social icons placeholders -->
+                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                        <a href="#" style="color: var(--nd-navy);">LinkedIn</a>
+                        <a href="#" style="color: var(--nd-navy);">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo">ND<span>SVA</span></div>
+            <div class="footer-links">
+                <a href="index.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="get-funded.html">Get Funded</a>
+                <a href="membership.html">Membership</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2026 Notre Dame Silicon Valley Angels. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--gray-800);">The University of Notre Dame has no
+                liability or responsibility for information or materials you or others receive from or through the
+                Network.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

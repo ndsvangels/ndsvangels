@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Funded - Notre Dame Silicon Valley Angels</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .page-header {
+            background-color: var(--nd-navy);
+            color: var(--white);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--nd-gold);
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-md);
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .step-num {
+            background-color: var(--nd-navy);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: var(--font-display);
+            margin-right: var(--spacing-md);
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--nd-navy);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ND<span>SVA</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="get-funded.html" class="active">Get Funded</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Get Funded</h1>
+            <p>We are looking for the next generation of world-changing startups.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <div style="margin-bottom: 3rem;">
+                <h2>Application Process</h2>
+                <p>We organize Pitch Nights every 6-8 weeks (in-person in the Bay Area or virtual). Startups have 20
+                    minutes for presentation and Q&A. Applications are reviewed on a rolling basis.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3>Apply Online</h3>
+                    <p>Complete our application form. It takes about 5-10 minutes. We want to know about your team, your
+                        product, and your traction.</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: 0.5rem;">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h3>Screening</h3>
+                    <p>If your startup is a good fit, a member of our diligence team will reach out for a 30-minute
+                        screening call to learn more.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3>Pitch Night Selection</h3>
+                    <p>Selected companies are invited to pitch at our upcoming event. We'll work with you on scheduling
+                        and preparation.</p>
+                </div>
+            </div>
+
+            <div class="section-alt"
+                style="padding: 2rem; border-radius: var(--radius-md); text-align: center; margin-top: 3rem; background-color: var(--off-white);">
+                <h3>Upcoming Pitch Schedule</h3>
+                <p>Check our <a href="events.html" style="font-weight: 600; text-decoration: underline;">Events Page</a>
+                    for the next pitch night dates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo">ND<span>SVA</span></div>
+            <div class="footer-links">
+                <a href="index.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="get-funded.html">Get Funded</a>
+                <a href="membership.html">Membership</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2026 Notre Dame Silicon Valley Angels. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--gray-800);">The University of Notre Dame has no
+                liability or responsibility for information or materials you or others receive from or through the
+                Network.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

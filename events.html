@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Notre Dame Silicon Valley Angels</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .page-header {
+            background-color: var(--nd-navy);
+            color: var(--white);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--nd-gold);
+        }
+
+        .event-card {
+            background: var(--white);
+            border-left: 4px solid var(--nd-gold);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .event-card {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .event-date {
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--nd-navy);
+            font-size: 1.25rem;
+            min-width: 150px;
+        }
+
+        .event-details {
+            flex-grow: 1;
+        }
+
+        .event-details h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .past-events {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ND<span>SVA</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="get-funded.html">Get Funded</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Events</h1>
+            <p>Join us for pitch nights, networking, and education.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container" style="max-width: 900px;">
+            <h2 style="margin-bottom: 2rem;">Upcoming Events</h2>
+
+            <div class="event-card">
+                <div class="event-date">
+                    FEB 23, 2026<br>
+                    <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">5:00 PM PST</span>
+                </div>
+                <div class="event-details">
+                    <h3>Pitch Night - Winter 2026</h3>
+                    <p>Join us virtually to hear from 3 selected startups. Members only.</p>
+                </div>
+                <a href="#" class="btn btn-primary">Register</a>
+            </div>
+
+            <h2 style="margin-top: 4rem; margin-bottom: 2rem;">Past Events</h2>
+
+            <div class="event-card past-events">
+                <div class="event-date">
+                    NOV 15, 2025
+                </div>
+                <div class="event-details">
+                    <h3>Fall Networking Mixer</h3>
+                    <p>San Francisco, CA</p>
+                </div>
+            </div>
+
+            <div class="event-card past-events">
+                <div class="event-date">
+                    SEP 10, 2025
+                </div>
+                <div class="event-details">
+                    <h3>Pitch Night - Fall 2025</h3>
+                    <p>Virtual</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo">ND<span>SVA</span></div>
+            <div class="footer-links">
+                <a href="index.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="get-funded.html">Get Funded</a>
+                <a href="membership.html">Membership</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2026 Notre Dame Silicon Valley Angels. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--gray-800);">The University of Notre Dame has no
+                liability or responsibility for information or materials you or others receive from or through the
+                Network.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
