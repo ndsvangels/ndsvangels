@@ -170,7 +170,7 @@
                     volunteers with membership managed
                     entirely via LinkedIn groups which we all use already. Simply request to join the Notre Dame Silicon
                     Valley Angel Group on its LinkedIn page <a href="https://www.linkedin.com/groups/14813062/"
-                        target="_blank" class="highlight-link">by clicking here</a>. Once we have verified that you
+                        target="_blank" rel="noopener noreferrer" class="highlight-link">by clicking here</a>. Once we have verified that you
                     are a Notre Dame alumni, you will be admitted to the group. You can then see other members and
                     build your entrepreneurial network.</p>
 
@@ -185,7 +185,7 @@
                 <p>Membership benefits include regular invites to our pitch events, the ability to apply to pitch
                     yourself, and networking with fellow alumni. In order to make investments, you must be an <a
                         href="https://www.sec.gov/education/capitalraising/is-it-right-for-me/accredited-investor"
-                        target="_blank">accredited investor</a> to join as an Angel Member.</p>
+                        target="_blank" rel="noopener noreferrer">accredited investor</a> to join as an Angel Member.</p>
             </div>
 
             <div
@@ -204,7 +204,9 @@
                         </ul>
                     </div>
                     <form id="member-form" class="card-footer">
+                        <label for="name" class="sr-only">Full Name</label>
                         <input type="text" id="name" placeholder="Full Name" required />
+                        <label for="email" class="sr-only">Email</label>
                         <input type="email" id="email" placeholder="Email" required />
                         <button type="submit" class="btn btn-primary">Join on LinkedIn</button>
                     </form>
@@ -234,7 +236,7 @@
                                     document.getElementById('member-form').reset();
                                 }
                             } catch (err) {
-                                // Silent fail or minor alert
+                                alert('Something went wrong. Please try again.');
                             }
                             window.location.href = 'https://www.linkedin.com/groups/14813062/';
                         });
@@ -256,7 +258,7 @@
                     </div>
                     <div class="card-footer">
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYR1TXGpKOaUXrbXYxy-DIxBFKzzkCI01C8HNavZQSj6AVvQ/viewform?usp=dialog"
-                            target="_blank" class="btn btn-primary">Become a Mentor</a>
+                            target="_blank" rel="noopener noreferrer" class="btn btn-primary">Become a Mentor</a>
                     </div>
                 </div>
             </div>
@@ -282,7 +284,7 @@
             <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--white);">Notre Dame Silicon Valley Angels
                 chapters are affinity organizations and not a part of The University of Notre Dame. The University has
                 no liability or responsibility for information or materials you or others receive from or through the
-                Network; said material do not constitute an offer, solicitation, or investment advice from the
+                Network; said material does not constitute an offer, solicitation, or investment advice from the
                 University. For more information, visit the chapter website.</p>
         </div>
     </footer>
