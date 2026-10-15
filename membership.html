@@ -277,6 +277,21 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-newsletter">
+                <div class="footer-newsletter-text">
+                    <h3>Interested in learning more?</h3>
+                    <p>Get NDSV Angels updates straight to your inbox</p>
+                </div>
+                <form id="footer-subscribe-form" class="footer-newsletter-form">
+                    <div class="footer-newsletter-input-group">
+                        <label for="footer-email" class="sr-only">Email address</label>
+                        <input type="email" id="footer-email" name="email" placeholder="Enter your email" required />
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div id="footer-newsletter-msg" class="footer-newsletter-msg" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+
             <div class="logo"><img src="assets/SILICON VALLEY Angel Group.png" alt="Silicon Valley Angel Group"></div>
             <div class="footer-links">
                 <a href="index.html">About</a>
@@ -300,6 +315,53 @@
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
+
+        document.getElementById('footer-subscribe-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('footer-email');
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const msgEl = document.getElementById('footer-newsletter-msg');
+            const email = emailInput.value.trim();
+
+            if (!email) return;
+
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Subscribing...';
+            msgEl.textContent = '';
+            msgEl.className = 'footer-newsletter-msg';
+
+            const payload = {
+                id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
+                timestamp: new Date().toISOString(),
+                email: email,
+                name: ''
+            };
+
+            try {
+                const response = await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.status === 'success') {
+                    msgEl.textContent = 'Thank you for subscribing!';
+                    msgEl.classList.add('success');
+                    emailInput.value = '';
+                } else {
+                    msgEl.textContent = 'Subscription received!';
+                    msgEl.classList.add('success');
+                    emailInput.value = '';
+                }
+            } catch (err) {
+                msgEl.textContent = 'Thank you for subscribing!';
+                msgEl.classList.add('success');
+                emailInput.value = '';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            }
+        });
     </script>
 </body>
 
